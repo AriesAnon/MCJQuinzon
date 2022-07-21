@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            MCJ Quinzon
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li id="home-nav"> 
+                    <a href="#home" class="line-animation">
+                        HOME
+                    </a>
+                </li>
+                <li id="projects-nav"> 
+                    <a href="#projects" class="line-animation">
+                        PROJECTS
+                    </a>
+                </li>
+                <li id="about-nav"> 
+                    <a href="#about" class="line-animation">
+                        ABOUT
+                    </a>
+                </li>
+                <li id="contact-nav"> 
+                    <a href="#contact" class="line-animation">
+                        CONTACT
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div id="home">
+            <div class="intro">
+                <p id="hw">
+                    <span aria-hidden="true">HELLO WORLD...</span>
+                    <span aria-hidden="true">HELLO WORLD...</span>
+                    HELLO WORLD...
+                </p>
+                <p id="txt-below-hw">I am Cyra, a Computer Engineer. I design websites and applications, create games, and build electronics. 
+                    I have a passion in art and anything that runs in code and electricity.</p>
+                <div class="home-button-container">
+                    <button class="resume">Résumé</button>
+                    <button class="github-profile" onclick="window.open('https://github.com/AriesAnon', '_blank');">Github Profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-arrow">
+            <span id="scroll">SCROLL</span>
+            <span id="down">DOWN</span>
+        </div>
+        <div id="projects">
+            <div class="title">
+                <h1>My Projects</h1>
+            </div>
+            <div id="i-sense" class="project-container">
+                <img class="project-image slide-in from-right" src="project-pictures/i-Sense.JPG" alt="i-SENSE Device" height="300">
+                <div class="project-not-img-container slide-in from-left">
+                    <h2>i-SENSE</h2>
+                    <p class="explanation">i-SENSE is a meat quality detecting device. It uses multiple sensors, temperature, pH, ammonia, and color sensor, to gather information and identify if the meat is fresh or not. It also utilizes a convolutional neural network to identify the type of meat presented. All of the data is then saved to the device’s local database.</p>
+                    <div class="project-button-container">
+                        <button class="demo" onclick="popISENSE()">DEMO</button>
+                        <button class="github-projects" onclick="window.open('https://github.com/AriesAnon/i-SenseCNN', '_blank');">GITHUB</button>
+                    </div>
+                </div>
+            </div>
+            <div id="crimelab" class="project-container">
+                <img class="project-image slide-in from-left" src="project-pictures/CrimeLab-Final.jpg" alt="CrimeLab Website" height="300">
+                <div class="project-not-img-container slide-in from-right">
+                    <h2>CrimeLab</h2>
+                    <p class="explanation">CrimeLab is a website that allows police officers to keep track of their cases and view 3D recreations of crime scenes and autopsies.</p>
+                    <div class="project-button-container">
+                        <button class="demo" onclick="popCRIMELAB()">DEMO</button>
+                        <button class="github-projects" onclick="window.open('https://github.com/AriesAnon/CrimeLab', '_blank');">GITHUB</button>
+                    </div>
+                </div>
+            </div>
+            <div id="wolfram" class="project-container">
+                <img class="project-image slide-in from-right" src="project-pictures/Wolfram-Final.JPG" alt="Wolfram Art Gallery Application" height="300">
+                <div class="project-not-img-container slide-in from-left">
+                    <h2>Wolfram Art Gallery</h2>
+                    <p class="explanation">Inspired by art galleries around the world, Wolfram is an application that enables art curators to store artworks and keep track of their employee’s information. </p>
+                    <div class="project-button-container">
+                        <button class="demo" onclick="popWOLFRAM()">DEMO</button>
+                        <button class="github-projects" onclick="window.open('https://github.com/AriesAnon/WolframArtGallery', '_blank');">GITHUB</button>
+                    </div>
+                </div>
+            </div>
+            <div id="scp" class="project-container">
+                <img class="project-image slide-in from-left" src="project-pictures/SCP-Final.JPG" alt="Secure, Contain and Protect Game" height="300">
+                <div class="project-not-img-container slide-in from-right">
+                    <h2>Secure, Contain and Protect</h2>
+                    <p class="explanation">The world is in shambles, and this is how you died. Secure, Contain and Protect is a 2D shooter game that allows you to control an agent and fight against zombies. </p>
+                    <div class="project-button-container">
+                        <button class="demo" onclick="popSCP()">DEMO</button>
+                        <button class="github-projects" onclick="window.open('https://github.com/AriesAnon/SecureContainAndProtect', '_blank');">GITHUB</button>
+                    </div>
+                </div>
+            </div>
+            <div id="pms" class="project-container">
+                <img class="project-image slide-in from-right" src="project-pictures/PMS-Final.JPG" alt="Power Monitoring System Application" height="300">
+                <div class="project-not-img-container slide-in from-left">
+                    <h2>Power Monitoring System</h2>
+                    <p class="explanation">Want to know which appliances in your house consume the most power? This application shows just that! Manage rooms, list appliances, and see the top 5 appliances that consumes the most power.</p>
+                    <div class="project-button-container">
+                        <button class="demo" onclick="popPMS()">DEMO</button>
+                        <button class="github-projects" onclick="window.open('https://github.com/AriesAnon/PowerMonitoringSystem', '_blank');">GITHUB</button>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container" id="video-container-i-sense">
+                <!-- <video src="project-demo/june 24, 2022 pitch vid.mp4" controls="true" id="i-sense-vid"></video> -->
+                <img src="project-pictures/close-icon.png" alt="Close Video Button" class="close" onclick="popISENSE()">
+            </div>
+            <div class="video-container" id="video-container-crimelab">
+                <!-- <video src="project-demo/CrimeLab 1.mp4" controls="true" id="crimelab-vid"></video> -->
+                <img src="project-pictures/close-icon.png" alt="Close Video Button" class="close" onclick="popCRIMELAB()">
+            </div>
+            <div class="video-container" id="video-container-wolfram">
+                <!-- <video src="project-demo/Art Gallery 1.mp4" controls="true" id="wolfram-vid"></video> -->
+                <img src="project-pictures/close-icon.png" alt="Close Video Button" class="close" onclick="popWOLFRAM()">
+            </div>
+            <div class="video-container" id="video-container-scp">
+                <!-- <video src="project-demo/SCP 1.mp4" controls="true" id="scp-vid"></video> -->
+    
+                <img src="project-pictures/close-icon.png" alt="Close Video Button" class="close" onclick="popSCP()">
+            </div>
+            <div class="video-container" id="video-container-pms">
+                <!-- <video src="project-demo/PMS Final.mp4" controls="true" id="pms-vid"></video> -->
+                <iframe src="https://drive.google.com/file/d/1uuMQ1dZvd6m7oWvmvZf5E97xFqz_OWCy/preview" id="pms-vid" allow="autoplay" allowfullscreen></iframe>
+                <img src="project-pictures/close-icon.png" alt="Close Video Button" class="close" onclick="popPMS()">
+            </div>
+            <script type="text/javascript">
+                function popISENSE(){
+                    var vid_container = document.querySelector("#video-container-i-sense"); //change this later. make it accept parameters to open the correct vid
+                    var video = document.querySelector("#i-sense-vid");
+                    vid_container.classList.toggle("active");
+                    video.pause();
+                    video.currentTime = 0;            
+                }
+
+                function popCRIMELAB(){
+                    var vid_container = document.querySelector("#video-container-crimelab"); //change this later. make it accept parameters to open the correct vid
+                    var video = document.querySelector("#crimelab-vid");
+                    vid_container.classList.toggle("active");
+                    video.pause();
+                    video.currentTime = 0;            
+                }
+
+                function popWOLFRAM(){
+                    var vid_container = document.querySelector("#video-container-wolfram"); //change this later. make it accept parameters to open the correct vid
+                    var video = document.querySelector("#wolfram-vid");
+                    vid_container.classList.toggle("active");
+                    video.pause();
+                    video.currentTime = 0;            
+                }
+                function popSCP(){
+                    var vid_container = document.querySelector("#video-container-scp"); //change this later. make it accept parameters to open the correct vid
+                    var video = document.querySelector("#scp-vid");
+                    vid_container.classList.toggle("active");
+                    video.pause();
+                    video.currentTime = 0;            
+                }
+
+                // function popPMS(){
+                //     var vid_container = document.querySelector("#video-container-pms"); //change this later. make it accept parameters to open the correct vid
+                //     var video = document.querySelector("#pms-vid");
+                //     vid_container.classList.toggle("active");
+                //     video.pause();
+                //     video.currentTime = 0;            
+                // }
+
+                function popPMS(){
+                    var vid_container = document.querySelector("#video-container-pms");
+                    vid_container.classList.toggle("active");  
+                    videoStopper("video-container-pms");    
+                }
+
+                let videoStopper = function(id) {
+                    let containerElement = document.getElementById(id);
+                    let iframe_tag = containerElement.querySelector( 'iframe');
+                    let video_tag = containerElement.querySelector( 'video' );
+                    if ( iframe_tag) {
+                        let iframeSrc = iframe_tag.src;
+                        iframe_tag.src = iframeSrc; 
+                    }
+                    if ( video_tag) {
+                        video_tag.pause();
+                    }
+                }
+            </script>
+        </div>
+        <div id="about">
+            <div class="title">
+                <h1>About Me</h1>
+            </div>
+            <div class="about-container">
+                <div class="img slide-in from-left">
+
+                </div>
+                <div class="about-not-img-container">
+                    <div class="name fade-in">
+                        <h2>Hi, I am Marianne Cyra Jun R. Quinzon.</h2>
+                    </div>
+                    <div class="paragraph-about-me slide-in from-right">
+                        <p>
+                        My name is quite long so just call me Cyra /saɪərɑ:/. I just recently graduated as a Computer Engineer. My interests range from the arts, particularly in painting and music, to code and electronics. No matter the topic, I love to solve problems. This is why I took an engineering course. I always find challenges to be fun and rewarding.
+                        <br><br>
+                        I love playing video games and, if there is a hobby that I feel like I am quite proficient in, it is painting, particularly digital painting. I started learning how to draw back in 2006 when I was in Grade 1. My interests shift from making anime drawings to making more realistic art. Recently, I paint for fun.
+                        <br><br>
+                        I am excited to combine my knowledge in the arts and programming and apply it in the field. I would love to work with other amazing programmers and am thrilled to learn more from them. Feel free to send me a message down in the contact form below and check out my other social media.	
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="fade-in">
+            <div class="title">
+                <h1>Contact Me</h1>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <form action="#">
+            
+                      <input type="text" id="name" name="name" placeholder="Your name...">
+                  
+                      <input type="text" id="email" name="email" placeholder="Your email...">
+                  
+                      <label for="msg"></label>
+                      <textarea id="msg" name="msg" placeholder="" style="height:200px"></textarea>
+                  
+                      <input type="submit" value="SEND">
+                  
+                    </form>
+                </div> 
+                <div class="contact-text-container">
+                    <p>
+                        Want to know more about me, the projects I worked on or felt like talking about games, feel free to do so here.
+                        <br><br>
+                        Drop a comment, question, concern, or a game suggestion, and thanks for stopping by!
+                        <br><br>
+                    Sent straight to my inbox: mcjquinzon@gmail.com
+                    </p>
+                    <div class="social-media">
+                        <a href="https://github.com/AriesAnon" target="_blank">
+                            <img src="project-pictures/icons8-github-100.png" alt="Github Icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/marianne-cyra-jun-quinzon" target="_blank">
+                            <img src="project-pictures/icons8-linkedin-circled-100.png" alt="LinkedIn Icon">
+                        </a>
+                        <a href="https://www.facebook.com/cyra.quinzon" target="_blank">
+                            <img src="project-pictures/icons8-facebook-100.png" alt="Facebook Icon">
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script src="inter-observe.js"></script>
+    </body>
+</html>
