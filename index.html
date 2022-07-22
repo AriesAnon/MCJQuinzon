@@ -116,6 +116,7 @@
             </div>
             <div class="video-container" id="video-container-crimelab">
                 <!-- <video src="project-demo/CrimeLab 1.mp4" controls="true" id="crimelab-vid"></video> -->
+                <iframe src="https://drive.google.com/file/d/1yu8s20APWsl4uLlG_u83W3w876TBk3y2/preview" id="crimelab-vid" allow="autoplay" allowfullscreen></iframe>
                 <img src="project-pictures/close-icon.png" alt="Close Video Button" class="close" onclick="popCRIMELAB()">
             </div>
             <div class="video-container" id="video-container-wolfram">
@@ -124,7 +125,7 @@
             </div>
             <div class="video-container" id="video-container-scp">
                 <!-- <video src="project-demo/SCP 1.mp4" controls="true" id="scp-vid"></video> -->
-    
+                <iframe src="https://drive.google.com/file/d/1iYNQPNrKiGXVg6GmFwruSTYISJHqSKVB/preview" id="scp-vid" allow="autoplay" allowfullscreen></iframe>
                 <img src="project-pictures/close-icon.png" alt="Close Video Button" class="close" onclick="popSCP()">
             </div>
             <div class="video-container" id="video-container-pms">
@@ -133,36 +134,36 @@
                 <img src="project-pictures/close-icon.png" alt="Close Video Button" class="close" onclick="popPMS()">
             </div>
             <script type="text/javascript">
-                function popISENSE(){
-                    var vid_container = document.querySelector("#video-container-i-sense"); //change this later. make it accept parameters to open the correct vid
-                    var video = document.querySelector("#i-sense-vid");
-                    vid_container.classList.toggle("active");
-                    video.pause();
-                    video.currentTime = 0;            
-                }
+                // function popISENSE(){
+                //     var vid_container = document.querySelector("#video-container-i-sense"); //change this later. make it accept parameters to open the correct vid
+                //     var video = document.querySelector("#i-sense-vid");
+                //     vid_container.classList.toggle("active");
+                //     video.pause();
+                //     video.currentTime = 0;            
+                // }
 
-                function popCRIMELAB(){
-                    var vid_container = document.querySelector("#video-container-crimelab"); //change this later. make it accept parameters to open the correct vid
-                    var video = document.querySelector("#crimelab-vid");
-                    vid_container.classList.toggle("active");
-                    video.pause();
-                    video.currentTime = 0;            
-                }
+                // function popCRIMELAB(){
+                //     var vid_container = document.querySelector("#video-container-crimelab"); //change this later. make it accept parameters to open the correct vid
+                //     var video = document.querySelector("#crimelab-vid");
+                //     vid_container.classList.toggle("active");
+                //     video.pause();
+                //     video.currentTime = 0;            
+                // }
 
-                function popWOLFRAM(){
-                    var vid_container = document.querySelector("#video-container-wolfram"); //change this later. make it accept parameters to open the correct vid
-                    var video = document.querySelector("#wolfram-vid");
-                    vid_container.classList.toggle("active");
-                    video.pause();
-                    video.currentTime = 0;            
-                }
-                function popSCP(){
-                    var vid_container = document.querySelector("#video-container-scp"); //change this later. make it accept parameters to open the correct vid
-                    var video = document.querySelector("#scp-vid");
-                    vid_container.classList.toggle("active");
-                    video.pause();
-                    video.currentTime = 0;            
-                }
+                // function popWOLFRAM(){
+                //     var vid_container = document.querySelector("#video-container-wolfram"); //change this later. make it accept parameters to open the correct vid
+                //     var video = document.querySelector("#wolfram-vid");
+                //     vid_container.classList.toggle("active");
+                //     video.pause();
+                //     video.currentTime = 0;            
+                // }
+                // function popSCP(){
+                //     var vid_container = document.querySelector("#video-container-scp"); //change this later. make it accept parameters to open the correct vid
+                //     var video = document.querySelector("#scp-vid");
+                //     vid_container.classList.toggle("active");
+                //     video.pause();
+                //     video.currentTime = 0;            
+                // }
 
                 // function popPMS(){
                 //     var vid_container = document.querySelector("#video-container-pms"); //change this later. make it accept parameters to open the correct vid
@@ -171,6 +172,18 @@
                 //     video.pause();
                 //     video.currentTime = 0;            
                 // }
+
+                function popSCP(){
+                    var vid_container = document.querySelector("#video-container-scp");
+                    vid_container.classList.toggle("active");  
+                    videoStopper("video-container-scp");    
+                }
+
+                function popCRIMELAB(){
+                    var vid_container = document.querySelector("#video-container-crimelab");
+                    vid_container.classList.toggle("active");  
+                    videoStopper("video-container-crimelab");    
+                }
 
                 function popPMS(){
                     var vid_container = document.querySelector("#video-container-pms");
@@ -222,7 +235,7 @@
             </div>
             <div class="contact-container">
                 <div class="contact-form-container">
-                    <form action="#">
+                    <form action="https://formspree.io/f/mrgjnaaq" method="POST">
             
                       <input type="text" id="name" name="name" placeholder="Your name...">
                   
