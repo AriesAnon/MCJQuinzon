@@ -5,6 +5,7 @@
             MCJ Quinzon
         </title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="project-pictures/cmdicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -32,24 +33,26 @@
                 </li>
             </ul>
         </header>
-        <div id="home">
-            <div class="intro">
-                <p id="hw">
-                    <span aria-hidden="true">HELLO WORLD...</span>
-                    <span aria-hidden="true">HELLO WORLD...</span>
-                    HELLO WORLD...
-                </p>
-                <p id="txt-below-hw">I am Cyra, a Computer Engineer. I design websites and applications, create games, and build electronics. 
-                    I have a passion in art and anything that runs in code and electricity.</p>
-                <div class="home-button-container">
-                    <button class="resume" onclick="window.open('Quinzon Resume 2022.pdf', '_blank');">Résumé</button>
-                    <button class="github-profile" onclick="window.open('https://github.com/AriesAnon', '_blank');">Github Profile</button>
+        <div id="background-img">
+            <div id="home">
+                <div class="intro">
+                    <p id="hw">
+                        <span aria-hidden="true">HELLO WORLD...</span>
+                        <span aria-hidden="true">HELLO WORLD...</span>
+                        HELLO WORLD...
+                    </p>
+                    <p id="txt-below-hw">I am Cyra, a Computer Engineer. I design websites and applications, create games, and build electronics. 
+                        I have a passion in art and anything that runs in code and electricity.</p>
+                    <div class="home-button-container">
+                        <button class="resume" onclick="window.open('Quinzon Resume 2022.pdf', '_blank');">Résumé</button>
+                        <button class="github-profile" onclick="window.open('https://github.com/AriesAnon', '_blank');">Github Profile</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-arrow">
-            <span id="scroll">SCROLL</span>
-            <span id="down">DOWN</span>
+            <div class="scroll-arrow">
+                <span id="scroll">SCROLL</span>
+                <span id="down">DOWN</span>
+            </div>
         </div>
         <div id="projects">
             <div class="title">
@@ -121,6 +124,7 @@
             </div>
             <div class="video-container" id="video-container-wolfram">
                 <!-- <video src="project-demo/Art Gallery 1.mp4" controls="true" id="wolfram-vid"></video> -->
+                <iframe src="https://drive.google.com/file/d/1t1g3MFx11ulctKUr83lMimpP9T4yjuHF/preview" id="wolfram-vid" allow="autoplay" allowfullscreen></iframe>
                 <img src="project-pictures/close-icon.png" alt="Close Video Button" class="close" onclick="popWOLFRAM()">
             </div>
             <div class="video-container" id="video-container-scp">
@@ -189,6 +193,12 @@
                     var vid_container = document.querySelector("#video-container-pms");
                     vid_container.classList.toggle("active");  
                     videoStopper("video-container-pms");    
+                }
+
+                function popWOLFRAM(){
+                    var vid_container = document.querySelector("#video-container-wolfram");
+                    vid_container.classList.toggle("active");  
+                    videoStopper("video-container-wolfram");    
                 }
 
                 let videoStopper = function(id) {
