@@ -357,6 +357,7 @@ button:hover{
 } */
 
 .video-container iframe{
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
