@@ -4,34 +4,53 @@
         <title>
             MCJ Quinzon
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="icon" type="image/x-icon" href="project-pictures/cmdicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header>
-            <ul>
-                <li id="home-nav"> 
-                    <a href="#home" class="line-animation">
-                        HOME
-                    </a>
-                </li>
-                <li id="projects-nav"> 
-                    <a href="#projects" class="line-animation">
-                        PROJECTS
-                    </a>
-                </li>
-                <li id="about-nav"> 
-                    <a href="#about" class="line-animation">
-                        ABOUT
-                    </a>
-                </li>
-                <li id="contact-nav"> 
-                    <a href="#contact" class="line-animation">
-                        CONTACT
-                    </a>
-                </li>
-            </ul>
+            <div class="navbar" id="navbar-id">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);" class="line-animation icon" onclick="openNavBar()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li id="home-nav"> 
+                        <a href="#home" class="line-animation">
+                            HOME
+                        </a>
+                    </li>
+                    <li id="projects-nav"> 
+                        <a href="#projects" class="line-animation">
+                            PROJECTS
+                        </a>
+                    </li>
+                    <li id="about-nav"> 
+                        <a href="#about" class="line-animation">
+                            ABOUT
+                        </a>
+                    </li>
+                    <li id="contact-nav"> 
+                        <a href="#contact" class="line-animation">
+                            CONTACT
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                function openNavBar() {
+                    var x = document.getElementById("navbar-id");
+                    if (x.className === "navbar") {
+                        x.className += " open";
+                    } else {
+                        x.className = "navbar";
+                    }
+                } 
+            </script>
         </header>
         <div id="background-img">
             <div id="home">
@@ -115,6 +134,7 @@
             </div>
             <div class="video-container" id="video-container-i-sense">
                 <!-- <video src="project-demo/june 24, 2022 pitch vid.mp4" controls="true" id="i-sense-vid"></video> -->
+                <iframe src="https://drive.google.com/file/d/1g-gldYDhKUwjFfEbx0LCyTXSpF-TXTTr/preview" id="i-sense-vid" allow="autoplay" allowfullscreen></iframe>
                 <img src="project-pictures/close-icon.png" alt="Close Video Button" class="close" onclick="popISENSE()">
             </div>
             <div class="video-container" id="video-container-crimelab">
@@ -176,6 +196,12 @@
                 //     video.pause();
                 //     video.currentTime = 0;            
                 // }
+
+                function popISENSE(){
+                    var vid_container = document.querySelector("#video-container-i-sense");
+                    vid_container.classList.toggle("active");  
+                    videoStopper("video-container-i-sense");    
+                }
 
                 function popSCP(){
                     var vid_container = document.querySelector("#video-container-scp");
@@ -282,6 +308,7 @@
             </div>
             
         </div>
+        <footer>© 2022 MARIANNE CYRA JUN QUINZON</footer>
         <script src="inter-observe.js"></script>
     </body>
 </html>
